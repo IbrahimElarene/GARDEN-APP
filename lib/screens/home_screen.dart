@@ -1,13 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:garden_app/core/app_icons/app_icons.dart';
 import 'package:garden_app/core/app_images/app_images.dart';
 import 'package:garden_app/widgets/card_item_image_widget.dart';
 
 import '../widgets/card_item_widget.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,25 +62,23 @@ class HomeScreen extends StatelessWidget {
                     spacing: 20,
                     children: [
                       CardItemWidget(
-                        image: AppIcons.vector,
-                        title: "Fan",
-                        imageDown: AppIcons.solar_power,
-                        imageRight: AppIcons.filled,
+                        title: 'Fan',
+                        icon: const Icon(FontAwesomeIcons.fan),
+                        iconDown: const Icon(Icons.power_settings_new),
                       ),
                       CardItemWidget(
-                        image: AppIcons.watering,
-                        title: "irrigation",
-                        imageDown: AppIcons.vector1,
-                        imageRight: AppIcons.filled,
+                        title: 'irrigation',
+                        icon: const Icon(Icons.water_drop),
+                        iconDown: const Icon(Icons.power_settings_new),
                       ),
                       CardItemWidget(
-                        image: AppIcons.lamp,
-                        title: "Smart light 1",
-                        imageDown: AppIcons.solar_power,
-                        imageRight: AppIcons.filled,
+                        title: 'Smart light 1',
+                        icon:  Icon(Icons.lightbulb_outline),
+                        iconDown:  Icon(Icons.power_settings_new),
                       ),
                     ],
-                  ),
+                  )
+                  ,
                 ),
               ],
             ),
