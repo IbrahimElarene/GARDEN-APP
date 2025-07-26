@@ -28,7 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 SizedBox(height: 16),
                 Row(
                   children: [
-                    Icon(Icons.arrow_back_outlined),
+                    IconButton(onPressed: (){},icon: Icon(Icons.arrow_back_outlined)),
                     SizedBox(width: 7),
                     Text(
                       'Garden',
